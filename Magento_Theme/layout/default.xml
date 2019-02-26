@@ -162,10 +162,10 @@
 			<referenceBlock name="top.links" remove="true"/>  
 			<referenceBlock name="skip_to_content" remove="true"/>  
 			<referenceBlock name="report.bugs" remove="true" />
-			<referenceBlock name="reviews.tab" remove="true" />
-			<referenceBlock name="product.review.form" remove="true" />
+			<!-- <referenceBlock name="reviews.tab" remove="true" />
+			<referenceBlock name="product.review.form" remove="true" />-->
 			<referenceBlock name="product.info.review" remove="true" />
-			<referenceBlock name="product.info.details" remove="true" />
+			<referenceBlock name="product.info.details" remove="true" /> 
 			<referenceBlock name="footer_links" remove="true" />
 			   <referenceBlock name="view.addto.compare" remove="true" />
       		  <referenceBlock name="catalog.compare.sidebar" remove="true"/>

@@ -15,6 +15,7 @@
 		<css src="css/bootstrap.min.css" />
         <script src="js/bootstrap.min.js"/>
          <!-- <css src="css/owl.carousel.css" /> -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
          <css src="css/owl.theme.default.css" />
           <css src="css/owl.carousel.min.css" />
     </head>

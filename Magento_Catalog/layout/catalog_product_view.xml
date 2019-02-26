@@ -11,6 +11,10 @@
         <move element="page.main.title" destination="product.info.main" before="-"/>
         <move element="product.info.stock.sku" destination="product.info.price" after="product.info.overview"/>
         <move element="product.info.review" destination="product.info.main" after="product.info.price"/>
+        <move element="product.info.type" destination="alert.urls" after="product.info.addto"/>
+        <move element="product.info.stock.sku" destination="alert.urls" after="-"/> 
+        <move element="product.info.description" destination="product.info.main" after="product.info.addto"/> 
+        <!-- <move element="reviews.tab" destination="content" after="product.info.details" /> -->
         <referenceBlock name="category.product.addto.compare" remove="true"/>
     </body>
 </page>

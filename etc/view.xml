@@ -11,14 +11,21 @@
     <media>
         <images module="Magento_Catalog">
             <image id="related_products_list" type="small_image">
-                    <width>400</width>
-                    <height>400</height>
+                    <width>269</width>
+                    <height>344</height>
             </image>
 
-            <image id="product_thumbnail_image" type="thumbnail">
-                    <width>150</width>
-                    <height>150</height>
+            
+            <image id="upsell_products_list" type="small_image">
+                <width>269</width>
+                <height>344</height>
             </image>
+
+             <image id="product_page_image_small" type="thumbnail">
+                <width>150</width>
+                <height>150</height>
+            </image>
+
 
         </images>
     </media>

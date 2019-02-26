@@ -158,7 +158,7 @@ switch ($type = $block->getType()) {
     <div class="clearfix"></div>
     <?php if ($type == 'related') { ?>
         <div class="block-title title">
-            <strong id="block-<?= /* @escapeNotVerified */ $class ?>-heading" role="heading" aria-level="2"><?= /* @escapeNotVerified */ $title ?></strong>
+            <strong id="block-<?= /* @escapeNotVerified */ $class ?>-heading" role="heading" aria-level="2"><p class="related-product"><?= /* @escapeNotVerified */ $title ?></p></strong>
             <p class="upsellproduct">Top seller in the week</p>
         </div>          
         <div id="relateditem_carousel"  class="products list items product-items owl-carousel owl-theme">           
@@ -243,7 +243,7 @@ switch ($type = $block->getType()) {
     <?php } elseif ($type == 'upsell') { ?>    
         <!--Start upsell products  Code-->
         <div class="block-title title">
-            <strong id="block-<?= /* @escapeNotVerified */ $class ?>-heading" role="heading" aria-level="2"><?= /* @escapeNotVerified */ $title ?> </strong>
+            <strong id="block-<?= /* @escapeNotVerified */ $class ?>-heading" role="heading" aria-level="2"><p class="related-product" ><?= /* @escapeNotVerified */ $title ?></p></strong>
             <p class="upsellproduct">Top seller in the week</p>
         </div>
         <div id="upsellitem_carousel"  class="products list items product-items owl-carousel owl-theme">            
@@ -423,7 +423,7 @@ require([
     $(function () {
         var products_list = $('.products.list');
         products_list.owlCarousel({  
-        loop:true,
+        // loop:true,
         margin:30,
         nav:true,
         autoplay:false,
@@ -432,11 +432,11 @@ require([
         dots:false,
         responsive:{
             0:{
-                items:6
+                items:4
             },  
             
             1200:{
-                items:6   
+                items:4
             }
         }
 })
