@@ -7,14 +7,11 @@
 -->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-    <move element="product.info.overview" destination="product.info.main" after="product.info.price" />
         <move element="page.main.title" destination="product.info.main" before="-"/>
-        <move element="product.info.stock.sku" destination="product.info.price" after="product.info.overview"/>
+        <move element="product.info.stock.sku" destination="product.info.price" after="product.price.final"/>
         <move element="product.info.review" destination="product.info.main" after="product.info.price"/>
-        <move element="product.info.type" destination="alert.urls" after="product.info.addto"/>
-        <move element="product.info.stock.sku" destination="alert.urls" after="-"/> 
-        <move element="product.info.description" destination="product.info.main" after="product.info.addto"/> 
-        <!-- <move element="reviews.tab" destination="content" after="product.info.details" /> -->
-        <referenceBlock name="category.product.addto.compare" remove="true"/>
+        <!-- <move element="product.attributes" destination="product.info.main" after="product.info.price"/> -->
+        <move element="product.info.overview" destination="page.main.title" />
+        <move element="product.info.details" destination="product.info.main" after="product_options_wrapper_bottom"/>
     </body>
 </page>

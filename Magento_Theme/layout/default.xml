@@ -24,7 +24,7 @@
 							</block>
 						</container>
 						<container name="header.top.right" htmlTag="div" htmlClass="col-sm-3">
-							<!-- <block class="\Magento\Framework\View\Element\Template" name="link-login" template='Magento_Theme::link.phtml'>
+							 <!-- <block class="\Magento\Framework\View\Element\Template" name="login" template="template/header.phtml">
 							</block> -->
 						</container>
 					</container>
@@ -162,12 +162,13 @@
 			<referenceBlock name="top.links" remove="true"/>  
 			<referenceBlock name="skip_to_content" remove="true"/>  
 			<referenceBlock name="report.bugs" remove="true" />
-			<!-- <referenceBlock name="reviews.tab" remove="true" />
-			<referenceBlock name="product.review.form" remove="true" />-->
+			<!-- <referenceBlock name="reviews.tab" remove="true" /> -->
+			<referenceBlock name="product.review.form" remove="true" />
 			<referenceBlock name="product.info.review" remove="true" />
-			<referenceBlock name="product.info.details" remove="true" /> 
+			<!-- <referenceBlock name="product.info.details" remove="true" />  -->
 			<referenceBlock name="footer_links" remove="true" />
-			   <referenceBlock name="view.addto.compare" remove="true" />
-      		  <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+			<referenceBlock name="view.addto.compare" remove="true" />
+			<referenceBlock name="my-account-link" remove="true" />  
+			<referenceBlock name="catalog.compare.sidebar" remove="true"/>
     </body>
 </page>
