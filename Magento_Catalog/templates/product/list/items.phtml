@@ -249,6 +249,15 @@ switch ($type = $block->getType()) {
                             <?php endif; ?>
                         <?php endif; ?>
 
+                <!-- Code swatch color in magento 2 -->
+                        <?php if ($_item->getTypeId()=="configurable"): ?>
+                            <div class="swatch-color">
+                            <?php 
+                            echo $this->getLayout()->createBlock('Magento\Swatches\Block\Product\Renderer\Listing\Configurable')->setProduct($_item)->setTemplate('Magento_Swatches::product/listing/renderer.phtml')->toHtml();
+                            ?>
+                            </div>
+                        <?php endif; ?>
+
                         <?php if ($showAddTo || $showCart): ?>
                             <div class="product actions product-item-actions">
                                 <?php if ($showCart): ?>
@@ -399,11 +408,11 @@ require([
     $(function () {
         var products_list = $('.products.list');
         products_list.owlCarousel({  
-        // loop:true,
+        loop:true,
         margin:30,
         nav:true,
-        autoplay:false,
-        autoplayTimeout:3000,
+        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+        autoplayTimeout:2000,
         dots:false,
         responsive:{
             0:{

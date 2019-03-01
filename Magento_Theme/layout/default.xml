@@ -11,12 +11,12 @@
 
 			<referenceContainer name="header.panel.wrapper" htmlClass="header-top">
 				<container htmlTag="div" htmlClass="container">
-					<container htmlTag="div" htmlClass="row">
+					<container htmlTag="div" htmlClass="header-content">
 						<container name="header.panel.store" htmlTag="div" htmlClass="header-panel-store col-sm-3" before="-">
 							<block class="Magento\Store\Block\Switcher" name="store_language" as="store_language" template="switch/languages.phtml"/>
 							<block class="Magento\Directory\Block\Currency" name="currency" after="-" template="currency.phtml"/>
 						</container>
-						<container name="header.top.middle" htmlTag="div" htmlClass="col-sm-6">
+						<container name="header.top.middle" htmlTag="div" htmlClass="header-slogan">
 							<block class="Magento\Cms\Block\Block" name="slogan">
 								<arguments>
 									<argument name="block_id" xsi:type="string">slogan-title</argument>
@@ -32,7 +32,7 @@
 			</referenceContainer>
 
 			<referenceContainer name="header-wrapper" htmlClass="header-bottom container" >
-				<container htmlTag="div" htmlClass="row">
+				<container htmlTag="div" htmlClass="header-logo">
 					<container name="header.bottom.left" htmlTag="div" htmlClass="col-sm-3 header-bottom-left" before="-">
 						<block class="Magento\Cms\Block\Block" name="facebook">
 							<arguments>
@@ -55,10 +55,10 @@
 		</referenceContainer>
 
 
-		<referenceContainer name="main.content">
+		<referenceContainer name="main.content.footer">
 			<container htmlTag="div" htmlClass="container footer-content">
-				<container htmlTag="div" htmlClass="row">
-					<container name="footer.top.middle" htmlTag="div" htmlClass="col-sm-3">
+				<container htmlTag="div" htmlClass="footer-sp">
+					<container name="footer.top.middle" htmlTag="div" htmlClass="footer-sp-info">
 						<block class="Magento\Cms\Block\Block" name="shipping">
 							<arguments>
 								<argument name="block_id" xsi:type="string">shipping</argument>
@@ -66,7 +66,7 @@
 						</block>
 					</container>
 
-					<container name="footer.middle" htmlTag="div" htmlClass="col-sm-3">
+					<container name="footer.middle" htmlTag="div" htmlClass="footer-sp-info">
 						<block class="Magento\Cms\Block\Block" name="support">
 							<arguments>
 								<argument name="block_id" xsi:type="string">support</argument>
@@ -74,7 +74,7 @@
 						</block>
 					</container>
 
-					<container name="footer.main.middle" htmlTag="div" htmlClass="col-sm-3">
+					<container name="footer.main.middle" htmlTag="div" htmlClass="footer-sp-info">
 						<block class="Magento\Cms\Block\Block" name="return">
 							<arguments>
 								<argument name="block_id" xsi:type="string">return</argument>
@@ -82,7 +82,7 @@
 						</block>
 					</container>
 
-					<container name="footer.bottom.middle" htmlTag="div" htmlClass="col-sm-3">
+					<container name="footer.bottom.middle" htmlTag="div" htmlClass="footer-sp-info">
 						<block class="Magento\Cms\Block\Block" name="payment">
 							<arguments>
 								<argument name="block_id" xsi:type="string">payment</argument>
@@ -96,7 +96,7 @@
 
 		<referenceContainer name="footer">
 			<container htmlTag="div" htmlClass="container-fluid cop-content">
-			<container htmlTag="div" htmlClass="row">
+			<container htmlTag="div" htmlClass="footer-info">
 				<container name="copy.main.middle" htmlTag="div" htmlClass="col-sm-3">
 				 <block class="Magento\Cms\Block\Block" name="home">
                     <arguments>
@@ -105,7 +105,7 @@
                 </block>
 				</container>
 
-				<container name="Categories.main.middle" htmlTag="div" htmlClass="col-sm-2">
+				<container name="Categories.main.middle" htmlTag="div" htmlClass="info-footer">
 				 <block class="Magento\Cms\Block\Block" name="Categories">
                     <arguments>
                         <argument name="block_id" xsi:type="string">Categories</argument>
@@ -113,7 +113,7 @@
                 </block>
 				</container>
 
-				<container name="infor.main.middle" htmlTag="div" htmlClass="col-sm-2">
+				<container name="infor.main.middle" htmlTag="div" htmlClass="info-footer">
 				 <block class="Magento\Cms\Block\Block" name="information">
                     <arguments>
                         <argument name="block_id" xsi:type="string">information</argument>
@@ -121,7 +121,7 @@
                 </block>
 				</container>
 
-				<container name="quick.main.middle" htmlTag="div" htmlClass="col-sm-2">
+				<container name="quick.main.middle" htmlTag="div" htmlClass="info-footer">
 				 <block class="Magento\Cms\Block\Block" name="Quick-link">
                     <arguments>
                         <argument name="block_id" xsi:type="string">Quick-link</argument>
@@ -139,7 +139,7 @@
 
 		<referenceContainer name="before.body.end">
 			<container htmlTag="div" htmlClass="container-fluid coppyright-content">
-			<container htmlTag="div" htmlClass="row">
+				<container htmlTag="div" htmlClass="copyright-footer">
 				<container name="copyright.main.middle" htmlTag="div" htmlClass="col-sm-6">
 				</container>
 
@@ -155,11 +155,11 @@
 		</referenceContainer>
 
 		 <move element="form.subscribe" destination="newleter.main.middle" after="quick.main.middle"/>
-		<move element="minicart" destination="search.wishlist.minicart" after="-"/>
-		<move element="top.search" destination="search.wishlist.minicart" before="-"/>
+		 <move element="minicart" destination="search.wishlist.minicart" after="-"/>
+		<move element="top.search" destination="search.wishlist.minicart" before="-"/> 
 		<move element="copyright" destination="copyright.main.middle" before="-"/>
 		<move element="logo" destination="header.bottom.middle" before="search.wishlist.minicart"/>
-			<referenceBlock name="top.links" remove="true"/>  
+			<!-- <referenceBlock name="top.links" remove="true"/>   -->
 			<referenceBlock name="skip_to_content" remove="true"/>  
 			<referenceBlock name="report.bugs" remove="true" />
 			<!-- <referenceBlock name="reviews.tab" remove="true" /> -->
@@ -170,5 +170,7 @@
 			<referenceBlock name="view.addto.compare" remove="true" />
 			<referenceBlock name="my-account-link" remove="true" />  
 			<referenceBlock name="catalog.compare.sidebar" remove="true"/>
+			 <referenceBlock name="form.subscribe" remove="true" />
+
     </body>
 </page>
